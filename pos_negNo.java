@@ -9,12 +9,15 @@ class pos_negNo
         System.out.print("Enter a number : ");
         int n = sc.nextInt();   
        
-        if(n >= 0)
+        if(n > 0)
         {
             System.out.print(n + " is Positive Number..");
         }
-        else{
+        else if(n < 0){
             System.out.print(n + " is Negative Number..");
+        }
+        else{
+             System.out.print(n + " is neither positive nor negative Number");
         }
 
         
