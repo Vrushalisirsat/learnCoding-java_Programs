@@ -1,7 +1,7 @@
-// Q.11 WAP to delete an element in an array.
+// Q.13 WAP to delete an element in an array.
 
 import java.util.*;
-class smallEle
+class deleteEle
 {
     public static void main(String args[])
     {
@@ -15,20 +15,25 @@ class smallEle
            arr[i] = sc.nextInt();
         }
 
+        System.out.print("Enter location of array : ");
+        int loc = sc.nextInt();
+
         System.out.print("Array Element are : ");
         for(int x : arr)
         {
             System.out.print(x + " ");
         }
 
-         int min=arr[0];
-        for(int i=1;i<n;i++)
+        for(int i=loc;i<n-1;i++)
         {
-            if(arr[i] < min)
-            {
-                min = arr[i];
-            }
+           arr[i] = arr[i+1];
         }
-        System.out.print("\nSmallest Element is " + min);
+       
+
+        System.out.print("\nnew Array Element are : ");
+        for(int i=0;i<n-1;i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
